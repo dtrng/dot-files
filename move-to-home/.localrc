@@ -1,0 +1,38 @@
+alias l='ls -lh'
+alias ll='ls -lh'
+alias la='ls -a'
+alias lla='ls -ahl'
+alias lal='ls -ahl'
+alias lt='ls -thor'
+
+alias q='exit'
+
+alias s='git status'
+alias a='git add'
+alias c='git commit -m'
+alias gp='git push'
+alias gc='git checkout'
+alias gd='git diff'
+alias gpr='git pull --rebase'
+alias gcf='git diff-tree --name-status --no-commit-id -r'
+alias gcm='git checkout master'
+alias gnb='git checkout -b'
+alias gitlog='git log --pretty=format:"%C(auto)%h %cd %<(10,trunc)%cn %d %s" --all --graph --date=short'
+
+# tmux aliases
+alias ta='tmux attach'
+alias tls='tmux ls'
+alias tat='tmux attach -t'
+alias tns='tmux new-session -s'
+
+alias mvim='mvim  -v'
+alias vim='mvim  -v'
+
+# zsh config
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.dotfiles/zsh/prompt.zsh
+source ~/.dotfiles/zsh/functions.zsh
+
+export PATH=$PATH:/usr/local/bin
+
