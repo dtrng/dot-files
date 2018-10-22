@@ -29,8 +29,6 @@ alias mvim='mvim  -v'
 alias vim='mvim  -v'
 
 # zsh config
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.dotfiles/zsh/prompt.zsh
 source ~/.dotfiles/zsh/functions.zsh
 
