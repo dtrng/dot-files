@@ -48,6 +48,20 @@ git_arrows() {
     echo $arrows
 }
 
+# print current git user
+git_user() {
+    # check if we're in a git repo
+    command git rev-parse --is-inside-work-tree &>/dev/null || return
+
+    local user=""
+    user="$(command git config user.email)"
+
+    # do nothing if the command failed
+    (( !$? )) || return
+
+    echo "%F{241}$user%f"
+}
+
 
 # indicate a job (for example, vim) has been backgrounded
 # If there is a job in the background, display a ✱
@@ -67,5 +81,5 @@ precmd() {
 }
 
 export PROMPT='%(?.%F{205}.%F{red})⇨%f '
-export RPROMPT='`git_dirty`%F{241}$vcs_info_msg_0_%f `git_arrows``suspended_jobs`'
+export RPROMPT='`git_dirty`%F{241}$vcs_info_msg_0_%f `git_arrows``suspended_jobs``git_user`'
 #export RPROMPT='`git_dirty`%F{241}%f `git_arrows``suspended_jobs`'
