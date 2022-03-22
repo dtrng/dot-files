@@ -18,6 +18,8 @@ alias gcf='git diff-tree --name-status --no-commit-id -r'
 alias gcm='git checkout master'
 alias gnb='git checkout -b'
 alias gitlog='git log --pretty=format:"%C(auto)%h %cd %<(10,trunc)%cn %d %s" --all --graph --date=short'
+alias gitlog='git log --pretty=format:"%C(auto)%h %cd %<(10,trunc)%cn %d %s" --all --graph --date="format:%Y-%m-%d %H:%M"'
+
 
 # tmux aliases
 alias ta='tmux attach'
