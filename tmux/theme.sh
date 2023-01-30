@@ -2,7 +2,7 @@
 
 tm_icon="🙊"
 tm_color_active=colour51
-tm_color_inactive=colour241
+tm_color_inactive=colour252
 tm_color_date=colour9
 tm_color_feature=colour198
 tm_color_music=colour41
