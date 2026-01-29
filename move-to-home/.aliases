@@ -27,12 +27,4 @@ alias tls='tmux ls'
 alias tat='tmux attach -t'
 alias tns='tmux new-session -s'
 
-alias mvim='mvim  -v'
-alias vim='mvim  -v'
-
-# zsh config
-source ~/.dotfiles/zsh/prompt.zsh
-source ~/.dotfiles/zsh/functions.zsh
-
-export PATH=$PATH:/usr/local/bin
 
