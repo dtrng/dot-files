@@ -23,6 +23,6 @@ antigen theme robbyrussell
 # Tell Antigen that you're done.
 antigen apply
 
-source $SCRIPT_DIR/../zsh/functions.zsh
-source $SCRIPT_DIR/../zsh/prompt.zsh
+source $SCRIPT_DIR/zsh/functions.zsh
+source $SCRIPT_DIR/zsh/prompt.zsh
 source $SCRIPT_DIR/.aliases
