@@ -21,6 +21,8 @@ return {
         'fsharp',
         'javascript',
         'typescript',
+        'typescriptreact',
+        'tsx',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
@@ -31,7 +33,7 @@ return {
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
         additional_vim_regex_highlighting = false,
       },
-      indent = { enable = true, disable = { 'ruby' } },
+      indent = { enable = true, disable = { 'ruby', 'tsx', 'typescriptreact' } },
     },
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:

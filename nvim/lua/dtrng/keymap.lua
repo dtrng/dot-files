@@ -66,3 +66,30 @@ vim.keymap.set("n", "<C-w>z", function()
 	-- Mark this tab as a zoom of the previous one
 	vim.t.zoom_origin = origin_tab
 end)
+
+-- Jump to the first terminal window found (if you have multiple splits)
+vim.keymap.set("n", "<leader>tt", function()
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    local buf = vim.api.nvim_win_get_buf(win)
+    if vim.bo[buf].buftype == "terminal" then
+      vim.api.nvim_set_current_win(win)
+      return
+    end
+  end
+  vim.notify("No terminal window found", vim.log.levels.WARN)
+end, { desc = "Jump to terminal window" })
+
+
+for i = 1, 5 do
+  vim.keymap.set("n", "<leader>" .. i, function()
+    vim.cmd(i .. "wincmd w")
+  end, { desc = "Jump to window " .. i })
+end
+
+
+
+-- Jump between quickfixes
+vim.keymap.set("n", "<leader>co", "<cmd>copen<cr>", { desc = "Open quickfix"})
+vim.keymap.set("n", "<leader>cc", "<cmd>cclose<cr>", { desc = "Close quickfix"})
+vim.keymap.set("n", "]q", "<cmd>cnext<cr>", { desc = "Next quickfix"})
+vim.keymap.set("n", "[q", "<cmd>cprev<cr>", { desc = "Prev quickfix"})

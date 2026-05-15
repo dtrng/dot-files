@@ -3,3 +3,5 @@ require('dtrng.keymap')
 require('dtrng.autocmd')
 require('dtrng.options')
 require('dtrng.lazy')
+require('dtrng.buffer-dropper').setup()
+
